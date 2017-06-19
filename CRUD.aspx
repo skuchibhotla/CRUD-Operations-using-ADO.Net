@@ -48,7 +48,7 @@
                         <asp:TextBox ID="TextBoxName" runat="server" Width="350px"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:Button ID="ButtonAdd" runat="server" Text="Add" Width="100px" />
+                        <asp:Button ID="ButtonAdd" runat="server" OnClick="ButtonAdd_Click" Text="Add" Width="100px" />
                     </td>
                 </tr>
                 <tr>

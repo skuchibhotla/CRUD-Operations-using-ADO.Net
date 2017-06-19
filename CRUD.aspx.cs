@@ -20,7 +20,7 @@ namespace DB_Connection.CRUD
 
         protected void ButtonSearch_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("select * from Person where eid=@id", con);
+            SqlCommand cmd = new SqlCommand("select * from Workers where id=@id", con);
             SqlParameter sp1 = new SqlParameter("@id", TextBoxID.Text);
             cmd.Parameters.Add(sp1);
             SqlDataReader dr1 = cmd.ExecuteReader();
@@ -36,6 +36,17 @@ namespace DB_Connection.CRUD
             {
                 LabelStatus.Text = "Sorry! Record not found!";
             }
+        }
+
+        protected void ButtonAdd_Click(object sender, EventArgs e)
+        {
+            SqlCommand cmd = new SqlCommand("insert into Person values ( @name, @age, @gender)", con);
+            cmd.Parameters.Add(new SqlParameter("@name", TextBoxName.Text));
+            cmd.Parameters.Add(new SqlParameter("@age", TextBoxAge.Text));
+            cmd.Parameters.Add(new SqlParameter("@gender", TextBoxGender.Text));
+
+            int x = cmd.ExecuteNonQuery();
+            LabelStatus.Text = x + "rows successfully added!";
         }
     }
 }
