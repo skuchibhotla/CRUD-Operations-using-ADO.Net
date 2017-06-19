@@ -40,6 +40,7 @@
                     </td>
                     <td>
                         <asp:Button ID="ButtonSearch" runat="server" OnClick="ButtonSearch_Click" Text="Search" Width="100px" />
+                        <asp:Button ID="ButtonClearData" runat="server" OnClick="ButtonClearData_Click" Text="Clear Data" Width="100px" />
                     </td>
                 </tr>
                 <tr>

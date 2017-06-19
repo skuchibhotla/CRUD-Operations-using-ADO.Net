@@ -70,5 +70,13 @@ namespace DB_Connection.CRUD
             int v = cmd.ExecuteNonQuery();
             LabelStatus.Text = v + " rows successfully deleted!";
         }
+
+        protected void ButtonClearData_Click(object sender, EventArgs e)
+        {
+            TextBoxID.Text = String.Empty;
+            TextBoxName.Text = String.Empty;
+            TextBoxAge.Text = String.Empty;
+            TextBoxGender.Text = String.Empty;
+        }
     }
 }
