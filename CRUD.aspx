@@ -57,7 +57,7 @@
                         <asp:TextBox ID="TextBoxGender" runat="server" Width="350px"></asp:TextBox>
                     </td>
                     <td class="auto-style4">
-                        <asp:Button ID="ButtonEdit" runat="server" Text="Edit" Width="100px" />
+                        <asp:Button ID="ButtonEdit" runat="server" OnClick="ButtonEdit_Click" Text="Edit" Width="100px" />
                     </td>
                 </tr>
                 <tr>

@@ -48,5 +48,18 @@ namespace DB_Connection.CRUD
             int x = cmd.ExecuteNonQuery();
             LabelStatus.Text = x + "rows successfully added!";
         }
+
+        protected void ButtonEdit_Click(object sender, EventArgs e)
+        {
+            SqlCommand cmd = new SqlCommand("update Workers set name=@name, age=@age, gender=@gender where id=@id",con);
+            cmd.Parameters.Add(new SqlParameter("@id", TextBoxID.Text));
+            cmd.Parameters.Add(new SqlParameter("@name", TextBoxName.Text));
+            cmd.Parameters.Add(new SqlParameter("@age", TextBoxAge.Text));
+            cmd.Parameters.Add(new SqlParameter("@gender", TextBoxGender.Text));
+
+            int c = cmd.ExecuteNonQuery();
+            LabelStatus.Text = c + " rows successfully updated!";
+
+        }
     }
 }
