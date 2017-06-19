@@ -40,7 +40,7 @@ namespace DB_Connection.CRUD
 
         protected void ButtonAdd_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("insert into Person values ( @name, @age, @gender)", con);
+            SqlCommand cmd = new SqlCommand("insert into Workers values ( @name, @age, @gender)", con);
             cmd.Parameters.Add(new SqlParameter("@name", TextBoxName.Text));
             cmd.Parameters.Add(new SqlParameter("@age", TextBoxAge.Text));
             cmd.Parameters.Add(new SqlParameter("@gender", TextBoxGender.Text));
