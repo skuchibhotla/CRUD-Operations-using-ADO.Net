@@ -61,5 +61,14 @@ namespace DB_Connection.CRUD
             LabelStatus.Text = c + " rows successfully updated!";
 
         }
+
+        protected void ButtonDelete_Click(object sender, EventArgs e)
+        {
+            SqlCommand cmd = new SqlCommand("delete from Workers where id=@id", con);
+            cmd.Parameters.Add(new SqlParameter("@id", TextBoxID.Text));
+
+            int v = cmd.ExecuteNonQuery();
+            LabelStatus.Text = v + " rows successfully deleted!";
+        }
     }
 }

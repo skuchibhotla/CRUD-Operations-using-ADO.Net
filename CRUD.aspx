@@ -66,7 +66,7 @@
                         <asp:TextBox ID="TextBoxAge" runat="server" Width="350px"></asp:TextBox>
                     </td>
                     <td>
-                        <asp:Button ID="ButtonDelete" runat="server" Text="Delete" Width="100px" />
+                        <asp:Button ID="ButtonDelete" runat="server" OnClick="ButtonDelete_Click" Text="Delete" Width="100px" />
                     </td>
                 </tr>
                 <tr>
